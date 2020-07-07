@@ -22,13 +22,13 @@ import com.makotojava.learn.odot.model.Category;
 @RestController
 @RequestMapping("/CategoryRestService")
 public class CategoryRestService extends SpringBootDemoController {
-private Category category;
+private Category categoryy;
 	
   @RequestMapping("/FindAll")
   public ResponseEntity<List<Category>> findAll() {
 	List<Category> listaItem = new ArrayList<Category>();
    //return getCategoryService().findAll();
-	  return new ResponseEntity<List<Category>>(category.findAll(),HttpStatus.OK);
+	  return new ResponseEntity<List<Category>>(getCategoryService().findAll(),HttpStatus.OK);
   }
   
 

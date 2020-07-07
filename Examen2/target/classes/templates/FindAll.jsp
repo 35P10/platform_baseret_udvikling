@@ -1,3 +1,5 @@
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -21,6 +23,7 @@ $(document).ready(function() {
 			tr.push('<tr>');
 			tr.push('<td>' + json[i].id + '</td>');
 			tr.push('<td>' + json[i].name + '</td>');
+			tr.push('<td>' + json[i].description + '</td>');
 			tr.push('</tr>');
 		}
 		$('table').append($(tr.join('')));
@@ -33,7 +36,7 @@ $(document).ready(function() {
 </head>
 <body>
 
-	<table border="1" cellspacing="0" cellpadding="5">
+	<table>
 		<tr>
 			<th>Id</th>
 			<th>Nombre</th>
